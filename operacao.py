@@ -114,13 +114,13 @@ class Operacao:
         return f'O {num1} não é primo!'
 
     def collatz(self,num1):
-        i=1
-        while num1 != 1:
-            if num1 % 2 == 0:
-                num1 = int (num1/2)
+        resultado = ""
+        for i in range(1, num1):
+            if i % 2 == 0:
+                resultado += f'\n{i / 2}'
             else:
-                num1 = 3 * num1 + 1
-            return f'\n{num1}'
+                resultado += f'\n{i * 3 + 1}'
+        return resultado
 
     def fibonnaci(self):
         n = int(input(" Digite Quantos termos você deseja :"))
@@ -141,13 +141,56 @@ class Operacao:
         for i in range(len(b)):
             soma += int(b[i])
         return soma
-    def somPeI(self,num1):
-        for i in range(1,num1):
-            if num1 % 2 == 0:
-                return f"Números Pares:{num1 % 2 == 0 * i}"
-            if num1 % 2 == 1:
-                return f"Números Impares:{num1}"
-        
+
+    def listPeI(self,num1):
+        resultado = ""
+        for i in range(1, num1):
+            if i % 2 == 0:
+                resultado += f'\n{i} Par'
+            else:
+                resultado += f'\n{i} Impar'
+        return resultado
+    def imprimirPrimos(self,num1):
+        primo = ""
+        for i in range(1,num1,1):
+            if i == 2 or i == 3 or i == 5:
+                primo += f'\n{i}'
+            elif num1 % 2 != 0 and num1 % 3 != 0 and num1 % 5 != 0:
+                primo += f'\n{i}'
+        return primo
+
+    def somIeP(self,num1):
+        par = 0
+        impar = 0
+        for i in range(1,num1 + 1):
+            if i % 2 == 0:
+                par += i
+            else:
+                impar += i
+        return f'A soma dos pares é de:{par}, e dos ímpares é:{impar}'
+    def ex1list2(self, num1 , num2):
+        num1 = num2
+        num2 = num1
+        return {num1} , {num2}
+
+    def ex2list2(self,num1):
+        return num1 - 1
+
+    def ex3list2(self, num1 , num2):
+        resultado = num1 * num2
+        return resultado
+    def ex4list2(self,num1):
+        num1 = 365 * num1
+        return num1
+
+
+
+
+
+
+
+
+
 
 
 

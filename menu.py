@@ -33,7 +33,14 @@ class Menu:
               "\n20. Sequência de Collatz"                  +
               "\n21. Sequência de Fibonnaci"                +
               "\n22. Soma de números separados"             +
-              "\n23. Números Pares e Impares"
+              "\n23. Lista de Pares e Impares"              +
+              "\n24. Imprimir Primos"                       +
+              "\n25. Soma de Pares e ímpares"               +
+              "\n26. A e B"                                 +
+              "\n27. Mostrar Antecessor"                    +
+              "\n28. Base E Altura"                         +
+              "\n29. Idade em dias"
+
               )
 
     def coletar(self):
@@ -110,6 +117,25 @@ class Menu:
                 print(f'A soma dos números é de:  {self.exer.somUsu(self.num1)}')
             elif self.opcao == 23:
                 self.coletar()  # chamando o input
-                print(f'  {self.exer.somPeI(self.num1)}')
+                print(f'  {self.exer.listPeI(self.num1)}')
+            elif self.opcao == 24:
+                self.coletar()  # chamando o input
+                print(f'  {self.exer.imprimirPrimos(self.num1)}')
+            elif self.opcao == 25:
+                self.coletar()  # chamando o input
+                print(f'  {self.exer.somIeP(self.num1)}')
+            elif self.opcao == 26:
+                self.coletar()  # chamando o input
+                print(f'  {self.exer.ex1list2(self.num1, self.num2)}')
+            elif self.opcao == 27:
+                self.num1 = int(input('Informe o primeiro número:'))
+                print(f'  {self.exer.ex2list2(self.num1)}')
+            elif self.opcao == 28:
+                self.coletar()  # chamando o input
+                print(f'  {self.exer.ex3list2(self.num1, self.num2)}')
+            elif self.opcao == 29:
+                self.num1 = int(input('Informe o primeiro número:'))
+                print(f'Sua quantidade de dias:  {self.exer.ex4list2(self.num1)}')
+
 
 
