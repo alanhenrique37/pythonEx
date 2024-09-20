@@ -169,9 +169,9 @@ class Operacao:
                 impar += i
         return f'A soma dos pares é de:{par}, e dos ímpares é:{impar}'
     def ex1list2(self, num1 , num2):
-        num1 = num2
-        num2 = num1
-        return {num1} , {num2}
+        num1 = 10
+        num2 = 20
+        return {num1 + 10} , {num2 - 10}
 
     def ex2list2(self,num1):
         return num1 - 1
@@ -179,24 +179,121 @@ class Operacao:
     def ex3list2(self, num1 , num2):
         resultado = num1 * num2
         return resultado
-    def ex4list2(self,num1):
-        num1 = 365 * num1
-        return num1
+    def ex4list2(self,num3, num4):
+        num3 = num3 * 365
+        num4 = num4 * 30
+        result = num3 + num4
+        return result
+    def ex5list2(self,num5,num6,num7,num8):
+        num6 = num5 / num6
+        num7 = num5 / num7
+        num8 = num5 / num8
+        return f'A porcentagem de votos brancos é de: {num6}%, a porcentagem de votos nulos é de: {num7}%, a porcentagem de votos válidos é de:{num8}%.'
+    def ex6list2(self, num9):
+        cont = num9 / 30
+        num9 = num9 + cont
+        return f'Seu salario com o reajuste é de:{num9}'
+    def ex7list2(self,num10):
+        imp = num10 / 45
+        dis = num10 / 28
+        num10 = num10 + imp + dis
+        return f'o valor total somando os impostos e a taxa do distribuidor é de: {num10}$'
+    def ex8list2(self,num11,num12,num13):
+        somaTotal = num11 + num12 + num13 / 3
+        return f'A média das notas é de: {somaTotal}'
+    def ex9list2(self,num1):
+        if num1 < 12:
+            num1 * 1.30
+        else:
+            num1 * 1
+        return f'O valor total da compra é de: {num1}$'
+    def ex10list2(self, num1):
+        maior = ""
+        for i in range(1, 11, 1):
+            num1 = int(input("Informe um número: "))
+            if i == 1:
+                maior = num1
+
+            if num1 > maior:
+                maior = num1
 
 
+        return f'O maior número é: {maior}'
+    def ex11list2(self, num25, num26):
+        if num26 <= 1500:
+            conta = num26 / 3
+            num25 = num25 + num26 + conta
+        else:
+            conta = num26 / 8
+            num25 = num25 + num26 + conta
+        return f'O valor total é de {num25}'
+    def ex12list2(self,numero,saldo,debito,credito):
+        saldoAtual = saldo - debito + credito
+        if saldoAtual > 0:
+            return f'O seu saldo de {saldoAtual}$ é positivo!'
+        else:
+            return f'O seu saldo de {saldoAtual}$ é negativo!'
+    def ex13list2(self,num1):
+        resultado = ""
+        for i in range(1, 11, 1):
+            if num1 <= 10:
+                resultado += f'\n{num1} * {i} = {num1 * i}'
+        return resultado
+    def ex14list2(self, num1):
+        resultado = ""
+        for i in range(0,num1,1):
+            resultado += f'\n{i}'
+        return resultado
+    def ex15list2(self, num1):
+        negativos = 0
+        for i in range(1, 11, 1):
+            num1 = int(input("Informe um número: "))
+            if num1 < 0:
+                negativos += 1
+        return f'A quantidade de negativos é: {negativos}'
+    def ex16list2(self, num1):
+        soma = -1
+        for i in range(11):
+            num1 = int(input("Informe um número: "))
+
+            if num1 < 40:
+                soma += num1
+        return f'A soma dos números menores que 40 é de: {soma}'
+    def ex17list2(self,num1):
+        total = 0
+        for i in range(15, 101, 1):
+            num1 = int(input("Informe um número: "))
+            total += num1
+            media = total / 100
+        return f'A média dos números fornecidos é de: {media}'
+    def ex18list2(self,num1):
+        cont = ""
+        total = 0
+        maior = ""
+        num1 = int(input("Informe um valor: "))
+        for i in range(1, num1 + 1, 1):
+            cont += f'{i}'
+            if i == 1:
+                maior = num1
+
+            if num1 > maior:
+                maior = num1
 
 
+            total += num1
+            media = total/num1
+        return f'De 1 até o maior número digitado: {cont}, O maior número: {maior}, e a média {media} ' #não consegui fazer com que a média pegasse o num1 para dividir pela soma
+    def ex19list2(self,num1):
+        meed = 0
+        total = 0
+        for i in range(1, 21, 1):
+            num1 = int(input("Informe um número: "))
+            total += num1
+            media = total / 20
+            if num1 > media:
+                meed += 1
 
-
-
-
-
-
-
-
-
-
-
+        return f'A média  é de: {media}, total de alunos acima de média: {meed}' #não consegui terminar
 
 
 
